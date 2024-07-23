@@ -1,7 +1,7 @@
 <?php
 require_once("headers.php");
 require_once("db.php");
-session_start();
+// session_start();
 // Get the posted data
 $data = json_decode(file_get_contents("php://input"));
 

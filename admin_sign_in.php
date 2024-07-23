@@ -1,7 +1,7 @@
 <?php
 require_once("headers.php");
 require_once("db.php");
-session_start();
+// session_start();
 header('Content-Type: application/json');
 
 // Get the raw POST data
