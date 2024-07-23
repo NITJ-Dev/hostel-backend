@@ -28,23 +28,29 @@ try {
 
     check_rollno($data->rollno);
 
-       // Check if rollno is already in booking table
-       $stmt = $conn->prepare("SELECT requester_rollno, accepter_rollno FROM booking WHERE requester_rollno = ? OR accepter_rollno = ?");
-       if (!$stmt) {
-           http_response_code(500); // Internal Server Error
-           throw new Exception("Prepare statement failed: " . $conn->error);
-       }
-       $stmt->bind_param("ss",$data->rollno, $data->rollno);
-       $stmt->execute();
-       $stmt->store_result();
+     // Check if rollno is already in booking table
+    $stmt = $conn->prepare("SELECT requester_rollno, accepter_rollno FROM booking WHERE requester_rollno = ? OR accepter_rollno = ?");
+    if (!$stmt) {
+        http_response_code(500); // Internal Server Error
+        throw new Exception("Prepare statement failed: " . $conn->error);
+    }
+    $stmt->bind_param("ss", $data->rollno, $data->rollno);
+    $stmt->execute();
+    $stmt->store_result();
 
-       if ($stmt->num_rows > 0) {
-           http_response_code(200); // Conflict
-           echo json_encode(['status' => 'error', 'message' => 'Room is already booked for this roll number.' ,"isBooked"=>true]);
-           $stmt->close();
-           $conn->close();
-           exit;
-       }
+    if ($stmt->num_rows > 0) {
+        $stmt->bind_result($requester_rollno, $accepter_rollno);
+        $stmt->fetch();
+
+        // Check if requester_rollno is the same as accepter_rollno
+        $flag = ($requester_rollno == $accepter_rollno);
+
+        http_response_code(200); // OK
+        echo json_encode(['status' => 'error', 'message' => 'Room is already booked for this roll number.', 'isBooked' => $flag]);
+        $stmt->close();
+        $conn->close();
+        exit;
+    }
 
     $userRoll = $data->rollno;
 
