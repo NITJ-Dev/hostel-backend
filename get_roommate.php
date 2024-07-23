@@ -44,12 +44,13 @@ try {
 
         // Check if requester_rollno is the same as accepter_rollno
         $flag = ($requester_rollno == $accepter_rollno);
-
-        http_response_code(200); // OK
-        echo json_encode(['status' => 'error', 'message' => 'Room is already booked for this roll number.', 'isBooked' => $flag]);
-        $stmt->close();
-        $conn->close();
-        exit;
+        if($flag==true){
+            http_response_code(200); // OK
+            echo json_encode(['status' => 'error', 'message' => 'Room is already booked for this roll number.', 'isBooked' => true]);
+            $stmt->close();
+            $conn->close();
+            exit;
+        }
     }
 
     $userRoll = $data->rollno;
