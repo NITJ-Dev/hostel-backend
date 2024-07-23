@@ -1,11 +1,20 @@
 <?php
-// require_once("headers.php");
+require_once("headers.php");
 
 
 
 require_once("db.php");
 
-session_start();
+// session_start();
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Enable logging
+ini_set('log_errors', 1);
+ini_set('error_log', '/var/log/php_errors.log'); // Ensure this path is writable by the web server
+
 
 // Get the posted data
 $data = json_decode(file_get_contents("php://input"));
@@ -69,17 +78,19 @@ if ($data && isset($data->email, $data->password)) {
                     http_response_code(200);
                     $_SESSION["rollno"] = $rollno;
                     $_SESSION["role"] = "student";
-                    $_SESSION["cr"] = hash('sha512',$rollno);
                     setcookie(
-                       "token_id",
-                         hash('sha512',$rollno),
-                        time() + 3600, // Expires in 1/3 hour
-                         "/",           // Available in the entire domain
-                         "v1.nitj.ac.in", // Domain
-                        // 'localhost',
-                        true,          // Secure
-                        true           // HTTP-only
-                     );
+                        "token_id",
+                        hash('sha512', $rollno),
+                        [
+                            'expires' => time() + 3600, // Expires in 1 hour
+                            'path' => '/',              // Path
+                            'domain' => 'v1.nitj.ac.in',   // Domain-of backend
+                            'domain' => 'localhost',    // Domain-of backend --comment in production
+                            'secure' => true,           // Secure
+                            'httponly' => true,         // HTTP-only
+                            'samesite' => 'None'        // SameSite attribute
+                        ]
+                    );
                     echo json_encode(['status' => 'success', 'message' => 'Sign in successful', 'rollno' => $rollno,"course_sem" => $course_sem,'form_uploaded' => $form_flag, 'doc_uploaded' => $doc_flag]);
                 } else {
                     http_response_code(403);
