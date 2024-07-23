@@ -13,8 +13,8 @@ function sendVerificationEmail($userEmail, $verificationCode) {
         $mail->isSMTP();
         $mail->Host = 'smtp.gmail.com'; 
         $mail->SMTPAuth = true;
-        $mail->Username = 'hostels.nitjalandhar@gmail.com'; // SMTP username
-        $mail->Password = 'ddihzzgmnumhsxhz'; // SMTP password
+        $mail->Username = 'hostels@nitj.ac.in'; // SMTP username
+        $mail->Password = 'juszznxasmrurfsl'; // SMTP password
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
         $mail->Port = 587;
 
