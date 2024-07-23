@@ -28,7 +28,7 @@ try {
 
     check_rollno($data->rollno);
 
-     // Check if rollno is already in booking table
+    // Check if rollno is already in booking table
     $stmt = $conn->prepare("SELECT requester_rollno, accepter_rollno FROM booking WHERE requester_rollno = ? OR accepter_rollno = ?");
     if (!$stmt) {
         http_response_code(500); // Internal Server Error
