@@ -1,0 +1,150 @@
+<?php
+require_once("headers.php");
+require_once("db.php");
+require_once("verify_student_cookie.php");
+
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
+// Enable logging
+ini_set('log_errors', 1);
+ini_set('error_log', '/var/log/php_errors.log'); // Ensure this path is writable by the web server
+
+try {
+    // Get the posted data
+    $data = json_decode(file_get_contents("php://input"));
+
+    if ($data === null) {
+        http_response_code(400); // Bad Request
+        throw new Exception('Invalid JSON input');
+    }
+
+    if (isset($data->rollno, $data->hostel_name, $data->room_no)) {
+        check_rollno($data->rollno);
+
+        $rollno = $data->rollno;
+        $hostel_name = $data->hostel_name;
+        $room_no = $data->room_no;
+
+        // Check if the room is already booked
+        $stmt = $conn->prepare("SELECT requester_rollno, accepter_rollno FROM booking WHERE room_no = ? AND hostel_name = ?");
+        if (!$stmt) {
+            http_response_code(500); // Internal Server Error
+            throw new Exception("Prepare statement failed: " . $conn->error);
+        }
+        $stmt->bind_param("ss", $room_no, $hostel_name);
+        $stmt->execute();
+        $stmt->store_result();
+
+        if ($stmt->num_rows > 0) {
+            http_response_code(200); // Conflict
+            echo json_encode(['status' => 'error', 'message' => 'Room is already booked.', "isBooked" => true]);
+            $stmt->close();
+            $conn->close();
+            exit;
+        }
+        $stmt->close();
+
+        // Verify clerk_verified flag for the student in student_form and student_docs
+        $stmt = $conn->prepare("
+            SELECT clerk_verified FROM student_form WHERE rollno = ? 
+            UNION ALL 
+            SELECT clerk_verified FROM student_docs WHERE rollno = ?
+        ");
+        if (!$stmt) {
+            http_response_code(500); // Internal Server Error
+            throw new Exception("Prepare statement failed: " . $conn->error);
+        }
+        $stmt->bind_param("ss", $rollno, $rollno);
+        $stmt->execute();
+        $stmt->store_result();
+
+        $clerk_verified = true;
+        while ($stmt->fetch()) {
+            $stmt->bind_result($clerk_verified);
+            if ($clerk_verified != 1) {
+                $clerk_verified = false;
+                break;
+            }
+        }
+        $stmt->close();
+
+        if (!$clerk_verified) {
+            http_response_code(403); // Forbidden
+            echo json_encode(['status' => 'error', 'message' => 'Clerk verification required.']);
+            $conn->close();
+            exit;
+        }
+
+        // Check if there are vacant seats in the room
+        $stmt = $conn->prepare("SELECT vacant_seats, filled_seats FROM hostel_rooms WHERE room_no = ? AND hostel_name = ?");
+        if (!$stmt) {
+            http_response_code(500); // Internal Server Error
+            throw new Exception("Prepare statement failed: " . $conn->error);
+        }
+        $stmt->bind_param("ss", $room_no, $hostel_name);
+        $stmt->execute();
+        $stmt->bind_result($vacant_seats, $filled_seats);
+        $stmt->fetch();
+        $stmt->close();
+
+        if ($vacant_seats <= 0) {
+            http_response_code(409); // Conflict
+            echo json_encode(['status' => 'error', 'message' => 'No vacant seats available in the selected room.', 'isBooked' => true]);
+            $conn->close();
+            exit;
+        }
+
+        // Start transaction
+        $conn->begin_transaction();
+
+        // Update the hostel_rooms table to decrement vacant_seats and increment filled_seats
+        $stmt = $conn->prepare("UPDATE hostel_rooms SET vacant_seats = vacant_seats - 1, filled_seats = filled_seats + 1 WHERE room_no = ? AND hostel_name = ?");
+        if (!$stmt) {
+            $conn->rollback();
+            http_response_code(500); // Internal Server Error
+            throw new Exception("Prepare statement failed: " . $conn->error);
+        }
+        $stmt->bind_param("ss", $room_no, $hostel_name);
+
+        if (!$stmt->execute()) {
+            $conn->rollback();
+            http_response_code(500); // Internal Server Error
+            throw new Exception('Database error: ' . $stmt->error);
+        }
+        $stmt->close();
+
+        // Store the booking details
+        $stmt = $conn->prepare("INSERT INTO booking (requester_rollno, accepter_rollno, room_no, hostel_name, alloted) VALUES (?, ?, ?, ?, 0)");
+        if (!$stmt) {
+            $conn->rollback();
+            http_response_code(500); // Internal Server Error
+            throw new Exception("Prepare statement failed: " . $conn->error);
+        }
+        $stmt->bind_param("ssss", $rollno, $rollno, $room_no, $hostel_name);
+
+        if (!$stmt->execute()) {
+            $conn->rollback();
+            http_response_code(500); // Internal Server Error
+            throw new Exception('Database error: ' . $stmt->error);
+        }
+        $stmt->close();
+
+        // Commit transaction
+        $conn->commit();
+
+        http_response_code(200); // OK
+        echo json_encode(['status' => 'success', 'message' => 'Booking request submitted successfully.']);
+    } else {
+        http_response_code(400); // Bad Request
+        throw new Exception('Invalid input');
+    }
+
+    $conn->close();
+} catch (Exception $e) {
+    http_response_code(500); // Internal Server Error
+    error_log('Error: ' . $e->getMessage());
+    echo json_encode(['status' => 'error', 'message' => $e->getMessage()]);
+}
+?>
