@@ -655,9 +655,9 @@ $pdf->SetMargins(20, 0, 20);
 // College Logo
 //$pdf->Image($photo['photo'],170,30,20);
 $pdf->SetFont('Times', 'B', 14);
-$pdf->Cell(0, 10, 'Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY', 0, 1, 'C');
+$pdf->Cell(0, 10, 'Dr B R AMBEDKAR NATIONAL INSTITUTE OF TECHNOLOGY JALANDHAR', 0, 1, 'C');
 $pdf->SetFont('Times', '', 12);
-$pdf->Cell(0, 0, 'G T Road Bye Pass, Jalandhar-144011, Punjab (India)', 0, 1, 'C');
+$pdf->Cell(0, 0, 'G T Road Bye Pass, Jalandhar-144008, Punjab (India)', 0, 1, 'C');
 $pdf->Cell(0, 7, str_repeat('_', 80), 0, 1, 'C');
 $pdf->Ln(7);
 
@@ -960,7 +960,7 @@ $pdf->Ln(20);
 $pdf->SetFont('Times', 'BI', 12);
 // Signature
 $pdf->MultiCell(0, 10, "Name & Signature of the Parent/Guardian\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tName & Signature of the Student");
-
+*/
 
 
 $pdf->AddPage();

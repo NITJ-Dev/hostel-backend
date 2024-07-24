@@ -1,5 +1,5 @@
 <?php
-/*
+
 
 // For Double Seater
 
@@ -449,7 +449,7 @@ $pdf->Ln(25);
 $pdf->SetFont('Times', 'IB', 12);
 $pdf->MultiCell(0, 10, "Name & Signature of the Student");
 
-
+*/
 
 $pdf->AddPage();
 $pdf->SetFont('Times', 'B', 12);
@@ -525,14 +525,14 @@ $pdf->Cell(0, 10, "Hostel Clerk");
 
 $pdf->Output(); // Output the merged PDF to the browser 
 }
-*/
+
 
 
 ?>
 
 
 <?php
-
+/*
 
 // =========================For Single Seater ==================================================================
 
@@ -899,8 +899,8 @@ $pdf->SetFont('Times', 'BI', 12);
 $pdf->MultiCell(0, 10, "Name & Signature of the Student\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\tName & Signature of the Parent/Guardian");
 
 
-/*
 
+/*
 $pdf->AddPage();
 $pdf->SetMargins(20, 0, 20);
 
@@ -1064,17 +1064,13 @@ $pdf->Ln(20);
 $pdf->Cell(0, 10, "Hostel Clerk");
 
 
-*/
+
 
 
 
 
 $pdf->Output(); // Output the merged PDF to the browser 
 }
-
+*/
 
 ?>
-
-
-
-
