@@ -2,7 +2,7 @@
 require_once("headers.php");
 require_once("db.php");
 header('Content-Type: application/json');
-require_once("verify_student_cookie.php");
+// require_once("verify_student_cookie.php");
 
 // Fetch data from student_form
 $form_query = "SELECT rollno, clerk_verified, clerk_remarks FROM student_form where self_verified=1 ORDER BY clerk_verified ASC";

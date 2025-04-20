@@ -1,7 +1,7 @@
 <?php
 
 // Connect to server and select database.
-$conn =  mysqli_connect("localhost", "hostelnitj", "Hostels8@mysql", "hostelnitj") or die(mysqli_connect_error());
+$conn =  mysqli_connect("localhost", "root", "", "nitjhosteldb") or die(mysqli_connect_error());
 
 
 //For kunal
