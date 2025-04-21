@@ -3,8 +3,7 @@
 // Connect to server and select database.
 $dbname = "nitjhosteldb"; // donot remove this as it is being used by other files.
 
-$conn =  mysqli_connect("localhost", "root", "", "nitjhosteldb") or die(mysqli_connect_error());
-
+$conn =  mysqli_connect("localhost", "root", "", "nitjhosteld1") or die(mysqli_connect_error());
 
 //For kunal
 //$conn =  mysqli_connect("localhost", "u267843737_hostel", "Hostel@123", "hostelnitj") or die(mysqli_connect_error());
