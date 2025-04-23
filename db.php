@@ -1,23 +1,41 @@
 <?php
+// Prevent direct access
+if (basename(__FILE__) == basename($_SERVER["SCRIPT_FILENAME"])) {
+    http_response_code(403);
+    exit("Access denied.");
+}
 
-// Connect to server and select database.
-$dbname = "nitjhosteldb"; // donot remove this as it is being used by other files.
+$isDev = true; // change to true on local/dev machine
 
-$conn =  mysqli_connect("localhost", "root", "", "nitjhosteld1") or die(mysqli_connect_error());
+if ($isDev) {
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
+} else {
+    ini_set('display_errors', 0);
+    ini_set('display_startup_errors', 0);
+}
 
-//For kunal
-//$conn =  mysqli_connect("localhost", "u267843737_hostel", "Hostel@123", "hostelnitj") or die(mysqli_connect_error());
+error_reporting(E_ALL);
+ini_set('log_errors', 1);
+ini_set('error_log', '/var/log/php_errors.log'); // Ensure it's writable
 
+// Database config
+$host = "localhost";
+$user = "u267843737_hostel"; 
+$user_password = "Hostel@123"; 
+$dbname = "nitjhosteldb"; 
 
-//
- //   $db_username = "u267843737_hostel";
- ////   $db_password = "Ndm8@nitj";
- //   $dbname = "u267843737_hostel";
+// Connect to database
+$conn = mysqli_connect($host, $user, $user_password, $dbname);
 
- //   $conn = new mysqli($servername, $db_username, $db_password, $dbname);
-
- //   if ($conn->connect_error) {
-   //     die("Connection failed: " . $conn->connect_error);
-////    }
-
+// Check connection
+if (!$conn) {
+    error_log("Database connection failed: " . mysqli_connect_error());
+    http_response_code(500); // Send internal server error
+    echo json_encode([
+        "success" => false,
+        "message" => "Internal server error."
+    ]);
+    exit;
+}
 ?>

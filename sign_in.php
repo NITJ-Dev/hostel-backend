@@ -1,8 +1,5 @@
 <?php
 require_once("headers.php");
-
-
-
 require_once("db.php");
 
 // session_start();
@@ -84,7 +81,7 @@ if ($data && isset($data->email, $data->password)) {
                         [
                             'expires' => time() + 3600, // Expires in 1 hour
                             'path' => '/',              // Path
-                            'domain' => 'v1.nitj.ac.in',   // Domain-of backend
+                            // 'domain' => 'v1.nitj.ac.in',   // Domain-of backend
                             'domain' => 'localhost',    // Domain-of backend --comment in production
                             'secure' => true,           // Secure
                             'httponly' => true,         // HTTP-only
