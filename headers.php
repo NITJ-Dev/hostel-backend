@@ -17,8 +17,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 session_set_cookie_params([
     'lifetime' => 0,
     'path' => '/',
-    'domain' => 'v1.nitj.ac.in',  //backedn-domain name
-    //  'domain' => 'localhost',//backedn-domain name --comment in production.
+    // 'domain' => 'v1.nitj.ac.in',  //backedn-domain name
+    'domain' => 'localhost',//backedn-domain name --comment in production.
     'secure' => true,
     'httponly' => true,
     'samesite' => 'None'
