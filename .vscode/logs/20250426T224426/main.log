@@ -1,0 +1,5 @@
+2025-04-26 22:44:27.237 [info] update#setState idle
+2025-04-26 22:44:57.241 [info] update#setState checking for updates
+2025-04-26 22:44:57.250 [info] update#setState available for download
+2025-04-26 22:45:16.221 [info] Extension host with pid 18609 exited with code: 0, signal: unknown.
+2025-04-27 11:09:13.235 [warning] No ptyHost heartbeat after 6 seconds

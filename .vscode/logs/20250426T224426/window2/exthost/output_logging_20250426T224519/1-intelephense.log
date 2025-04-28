@@ -1,0 +1,49 @@
+[Info  - 22:45:23] Initialising intelephense 1.14.4
+[Info  - 22:45:23] Initialised in 24 ms
+[Info  - 22:45:23] Searching file:///root/.vscode/extensions/bmewburn.vscode-intelephense-client-1.14.4/node_modules/intelephense/lib/stub for files to index.
+[Info  - 22:45:23] Searching file:///var/www/html/hostel-backend for files to index.
+[Info  - 22:45:23] Indexing started.
+[Info  - 22:45:24] Searching file:///var/www/html/hostel-backend/.vscode/User/globalStorage/bmewburn.vscode-intelephense-client for files to index.
+[Info  - 22:45:24] Searching file:///var/www/html/hostel-backend/.vscode/User/workspaceStorage/6600f7917614646534df9e49a28f9ed7/bmewburn.vscode-intelephense-client for files to index.
+[Info  - 22:45:24] Searching file:///var/www/html/hostel-backend/.vscode/logs/20250426T224426/window2/exthost/output_logging_20250426T224519 for files to index.
+[Info  - 22:45:25] Searching file:///var/www/html/hostel-backend/.vscode/logs/20250426T224426/window2/exthost/vscode.json-language-features for files to index.
+[Warn  - 22:45:26] Error: ENOENT: no such file or directory, open '/var/www/html/hostel-backend/info.php'
+[Info  - 22:45:26] Indexing ended. 341 files indexed in 3s.
+[Info  - 22:45:26] Writing state to /var/www/html/hostel-backend/.vscode/User/workspaceStorage/6600f7917614646534df9e49a28f9ed7/bmewburn.vscode-intelephense-client/25e22db1.
+[Info  - 22:45:27] Wrote state in 0.3s.
+[Warn  - 22:45:28] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.On0PTY'
+[Warn  - 22:45:37] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.rqYYTP'
+[Warn  - 22:46:27] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/SharedStorage-journal'
+[Info  - 22:49:29] Searching file:///var/www/html/hostel-backend/.vscode/Backups/ba6db503ea5074e5dc6083622a3bfba7 for files to index.
+[Info  - 22:49:29] Searching file:///var/www/html/hostel-backend/.vscode/Backups/ba6db503ea5074e5dc6083622a3bfba7/file for files to index.
+[Warn  - 22:49:29] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/Backups/ba6db503ea5074e5dc6083622a3bfba7/file/c54837'
+[Info  - 22:49:29] Searching file:///var/www/html/hostel-backend/.vscode/User/History/4ec7528b for files to index.
+[Warn  - 00:03:40] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/Backups/ba6db503ea5074e5dc6083622a3bfba7/file/635f851d'
+[Info  - 00:03:40] Searching file:///var/www/html/hostel-backend/.vscode/User/History/-6c244b7 for files to index.
+[Warn  - 01:01:21] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.b8prQ5'
+[Info  - 01:23:50] Searching file:///var/www/html/hostel-backend/.vscode/User/History/16057ac2 for files to index.
+[Warn  - 01:23:54] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.HaN92L'
+[Info  - 01:24:59] Searching file:///var/www/html/hostel-backend/.vscode/User/History/-5c52dc1f for files to index.
+[Warn  - 01:25:17] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.5Mp8st'
+[Warn  - 01:25:20] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/User/settings.json.vsctmp'
+[Warn  - 01:25:20] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/User/settings.json.vsctmp'
+[Info  - 01:25:20] Searching file:///var/www/html/hostel-backend/.vscode/User/History/564c28bf for files to index.
+[Warn  - 01:32:06] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.0y2Uu7'
+[Info  - 01:36:20] Searching file:///var/www/html/hostel-backend/.vscode/User/History/-6d0f6a5 for files to index.
+[Warn  - 01:37:23] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.L09QWs'
+[Warn  - 01:37:44] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.jgEhph'
+[Warn  - 01:38:48] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.mccWYq'
+[Info  - 01:40:53] Searching file:///var/www/html/hostel-backend/.vscode/User/History/3ac0063c for files to index.
+[Warn  - 01:41:11] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.zkJfDT'
+[Warn  - 01:41:26] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.2dyYQs'
+[Warn  - 01:42:06] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.JMibrp'
+[Warn  - 01:45:33] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.YWR6BH'
+[Warn  - 01:47:03] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.E1nLkw'
+[Warn  - 01:48:28] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.HyIVX2'
+[Info  - 02:00:55] Searching file:///var/www/html/hostel-backend/.vscode/User/History/2a9bd138 for files to index.
+[Warn  - 02:01:37] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.8rNh6L'
+[Warn  - 02:02:06] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.PRziDl'
+[Warn  - 02:32:41] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.0ZaA8Y'
+[Warn  - 02:43:37] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.xOP2NN'
+[Warn  - 11:15:52] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.k33RYX'
+[Warn  - 19:09:01] Error: ENOENT: no such file or directory, stat '/var/www/html/hostel-backend/.vscode/.org.chromium.Chromium.8DaDqX'

@@ -1,0 +1,9 @@
+2025-04-26 22:44:31.699 [info] Deleted marked for removal extension from disk bmewburn.vscode-intelephense-client /root/.vscode/extensions/bmewburn.vscode-intelephense-client-1.12.2
+2025-04-26 22:44:31.848 [info] Marked extension as removed bmewburn.vscode-intelephense-client-1.12.2
+2025-04-26 22:44:34.858 [info] Getting Manifest... bmewburn.vscode-intelephense-client
+2025-04-26 22:44:35.505 [info] Installing extension: bmewburn.vscode-intelephense-client {"productVersion":{"version":"1.97.2","date":"2025-02-12T23:20:35.343Z"},"pinned":false,"operation":3,"isApplicationScoped":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/root/.vscode/extensions/extensions.json","path":"/root/.vscode/extensions/extensions.json","scheme":"vscode-userdata"},"installOnlyNewlyAddedFromExtensionPack":true}
+2025-04-26 22:44:39.710 [info] Extension signature verification result for bmewburn.vscode-intelephense-client: Success. Executed: true. Duration: 3090ms.
+2025-04-26 22:44:41.104 [info] Extracted extension to file:///root/.vscode/extensions/bmewburn.vscode-intelephense-client-1.14.4: bmewburn.vscode-intelephense-client
+2025-04-26 22:44:41.182 [info] Renamed to /root/.vscode/extensions/bmewburn.vscode-intelephense-client-1.14.4
+2025-04-26 22:44:41.210 [info] Marked extension as removed bmewburn.vscode-intelephense-client-1.12.4
+2025-04-26 22:44:41.215 [info] Extension installed successfully: bmewburn.vscode-intelephense-client vscode-userdata:/root/.vscode/extensions/extensions.json

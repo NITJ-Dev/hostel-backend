@@ -1,0 +1,416 @@
+2025-04-26 22:45:20.459 [info] [main] Log level: Info
+2025-04-26 22:45:20.459 [info] [main] Validating found git in: "git"
+2025-04-26 22:45:20.459 [info] [main] Using git "2.43.0" from "git"
+2025-04-26 22:45:20.459 [info] [Model][doInitialScan] Initial repository scan started
+2025-04-26 22:45:20.459 [info] > git rev-parse --show-toplevel [21ms]
+2025-04-26 22:45:20.459 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-26 22:45:20.459 [info] > git rev-parse --show-toplevel [6ms]
+2025-04-26 22:45:20.459 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-26 22:45:20.474 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-26 22:45:20.474 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-26 22:45:20.491 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-26 22:45:20.491 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-26 22:45:20.506 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-26 22:45:20.506 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-26 22:45:20.523 [info] > git rev-parse --show-toplevel [4ms]
+2025-04-26 22:45:20.523 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-26 22:45:20.541 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-26 22:45:20.542 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-26 22:45:20.548 [info] [Model][doInitialScan] Initial repository scan completed - repositories (0), closed repositories (0), parent repositories (0), unsafe repositories (1)
+2025-04-26 22:45:20.837 [info] > git rev-parse --show-toplevel [4ms]
+2025-04-26 22:45:20.838 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-26 22:45:20.953 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-26 22:45:20.953 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-26 22:45:21.999 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-26 22:45:21.999 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-26 22:45:22.190 [info] > git rev-parse --show-toplevel [4ms]
+2025-04-26 22:45:22.191 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-26 22:45:45.680 [info] > git rev-parse --show-toplevel [4ms]
+2025-04-26 22:45:45.680 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-26 22:49:11.247 [info] > git rev-parse --show-toplevel [4ms]
+2025-04-26 22:49:11.248 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-26 22:53:36.517 [info] > git rev-parse --show-toplevel [5ms]
+2025-04-26 22:53:36.517 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-26 22:54:00.657 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-26 22:54:00.657 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 00:03:29.942 [info] > git rev-parse --show-toplevel [6ms]
+2025-04-27 00:03:29.942 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 00:07:20.584 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-27 00:07:20.584 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:23:16.223 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:23:16.223 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:23:42.294 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:23:42.294 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:24:51.024 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-27 01:24:51.024 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:25:00.427 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-27 01:25:00.427 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:25:20.207 [info] > git rev-parse --show-toplevel [61ms]
+2025-04-27 01:25:20.207 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:25:22.940 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-27 01:25:22.940 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:36:00.741 [info] > git rev-parse --show-toplevel [4ms]
+2025-04-27 01:36:00.741 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:36:50.602 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:36:50.602 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:36:58.645 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:36:58.645 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:37:10.722 [info] > git rev-parse --show-toplevel [7ms]
+2025-04-27 01:37:10.722 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:37:31.918 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-27 01:37:31.918 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:37:57.806 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:37:57.806 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:38:01.381 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-27 01:38:01.381 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:38:05.079 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:38:05.079 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:38:06.128 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:38:06.128 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:40:36.919 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:40:36.919 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:40:47.800 [info] > git rev-parse --show-toplevel [4ms]
+2025-04-27 01:40:47.800 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:40:55.608 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:40:55.608 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:40:59.133 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:40:59.133 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:41:07.420 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:41:07.420 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:41:09.098 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-27 01:41:09.098 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:41:14.250 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:41:14.250 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:41:15.993 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-27 01:41:15.993 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:41:34.615 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-27 01:41:34.615 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:41:37.183 [info] > git rev-parse --show-toplevel [1ms]
+2025-04-27 01:41:37.183 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:41:57.778 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-27 01:41:57.779 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:41:58.670 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:41:58.670 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:42:09.381 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:42:09.381 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:42:10.862 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:42:10.862 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:42:23.381 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:42:23.381 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:42:41.307 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:42:41.307 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:42:47.172 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:42:47.172 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:42:52.021 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-27 01:42:52.021 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:42:52.917 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:42:52.917 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:42:53.597 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:42:53.597 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:47:27.791 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 01:47:27.791 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 01:54:42.847 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-27 01:54:42.847 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 02:03:21.715 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 02:03:21.715 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 02:03:32.460 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 02:03:32.460 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 02:03:33.921 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 02:03:33.921 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 02:03:34.980 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 02:03:34.980 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 02:18:52.262 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-27 02:18:52.262 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 02:19:02.583 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-27 02:19:02.583 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 02:19:12.773 [info] > git rev-parse --show-toplevel [4ms]
+2025-04-27 02:19:12.773 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-04-27 02:19:14.350 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 02:19:14.350 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 02:31:27.073 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 02:31:27.073 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 02:37:13.747 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 02:37:13.747 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 02:37:13.763 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 02:37:13.763 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 02:37:16.628 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 02:37:16.629 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 02:37:18.111 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 02:37:18.111 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 02:37:18.126 [info] > git rev-parse --show-toplevel [1ms]
+2025-04-27 02:37:18.126 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 02:37:20.496 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-27 02:37:20.496 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 02:37:22.355 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 02:37:22.355 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 02:37:22.370 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 02:37:22.370 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 02:37:25.571 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 02:37:25.571 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 02:43:14.201 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 02:43:14.201 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 14:39:43.245 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 14:39:43.245 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-27 14:53:14.602 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-27 14:53:14.602 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-28 08:42:15.880 [info] > git config --global --add safe.directory /var/www/html/hostel-backend [8ms]
+2025-04-28 08:42:15.898 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-28 08:42:15.913 [info] > git rev-parse --git-dir --git-common-dir [2ms]
+2025-04-28 08:42:15.935 [info] [Model][openRepository] Opened repository: /var/www/html/hostel-backend
+2025-04-28 08:42:15.958 [info] > git config --get commit.template [4ms]
+2025-04-28 08:42:15.976 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2025-04-28 08:42:15.990 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/var/www/html/hostel-backend/.git/refs/remotes/origin/main'
+2025-04-28 08:42:16.003 [info] > git rev-parse refs/remotes/origin/main [14ms]
+2025-04-28 08:42:16.037 [info] > git status -z -uall [20ms]
+2025-04-28 08:42:16.037 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [6ms]
+2025-04-28 08:42:16.104 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [22ms]
+2025-04-28 08:42:16.123 [info] > git config --get --local branch.main.vscode-merge-base [3ms]
+2025-04-28 08:42:16.136 [info] > git config --get commit.template [33ms]
+2025-04-28 08:42:16.276 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/origin/main refs/remotes/origin/main [140ms]
+2025-04-28 08:42:16.463 [info] > git merge-base refs/heads/main refs/remotes/origin/main [162ms]
+2025-04-28 08:42:16.501 [info] > git diff --name-status -z --diff-filter=ADMR 809d1db1e1604ec40ec94f9f224d2010ca793896...refs/remotes/origin/main [22ms]
+2025-04-28 08:42:16.502 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [41ms]
+2025-04-28 08:42:16.516 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/var/www/html/hostel-backend/.git/refs/remotes/origin/main'
+2025-04-28 08:42:16.518 [info] > git rev-parse refs/remotes/origin/main [2ms]
+2025-04-28 08:42:16.550 [info] > git status -z -uall [19ms]
+2025-04-28 08:42:16.555 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [9ms]
+2025-04-28 08:42:16.603 [info] > git show --textconv :sign_in.php [22ms]
+2025-04-28 08:42:16.603 [info] > git ls-files --stage -- /var/www/html/hostel-backend/sign_in.php [4ms]
+2025-04-28 08:42:16.628 [info] > git cat-file -s e76ff920b6a56caeaa18d7dbf23b4609b8e91d4e [10ms]
+2025-04-28 08:42:16.645 [info] > git log --format=%H%n%aN%n%aE%n%at%n%ct%n%P%n%D%n%B -z --shortstat --diff-merges=first-parent -n50 --skip=0 --topo-order --decorate=full --stdin [148ms]
+2025-04-28 08:42:16.768 [info] > git blame --root --incremental 809d1db1e1604ec40ec94f9f224d2010ca793896 -- /var/www/html/hostel-backend/sign_in.php [4ms]
+2025-04-28 08:42:17.072 [info] > git check-ignore -v -z --stdin [3ms]
+2025-04-28 08:42:17.927 [info] > git config --get commit.template [15ms]
+2025-04-28 08:42:17.929 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2025-04-28 08:42:17.943 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/var/www/html/hostel-backend/.git/refs/remotes/origin/main'
+2025-04-28 08:42:17.946 [info] > git rev-parse refs/remotes/origin/main [3ms]
+2025-04-28 08:42:17.975 [info] > git status -z -uall [16ms]
+2025-04-28 08:42:17.978 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [5ms]
+2025-04-28 08:42:23.019 [info] > git config --get commit.template [17ms]
+2025-04-28 08:42:23.020 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/main refs/remotes/main [3ms]
+2025-04-28 08:42:23.032 [warning] [Git][revParse] Unable to read file: ENOENT: no such file or directory, open '/var/www/html/hostel-backend/.git/refs/remotes/origin/main'
+2025-04-28 08:42:23.035 [info] > git rev-parse refs/remotes/origin/main [3ms]
+2025-04-28 08:42:23.063 [info] > git status -z -uall [14ms]
+2025-04-28 08:42:23.068 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [7ms]

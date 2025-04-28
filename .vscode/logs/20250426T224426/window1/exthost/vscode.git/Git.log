@@ -1,0 +1,36 @@
+2025-04-26 22:44:49.128 [info] [main] Log level: Info
+2025-04-26 22:44:49.128 [info] [main] Validating found git in: "git"
+2025-04-26 22:44:49.128 [info] [main] Using git "2.43.0" from "git"
+2025-04-26 22:44:49.128 [info] [Model][doInitialScan] Initial repository scan started
+2025-04-26 22:44:49.128 [info] > git rev-parse --show-toplevel [17ms]
+2025-04-26 22:44:49.128 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-04-26 22:44:49.133 [info] > git rev-parse --show-toplevel [5ms]
+2025-04-26 22:44:49.133 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel
+2025-04-26 22:44:49.150 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-26 22:44:49.150 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-backend'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-backend
+2025-04-26 22:44:49.166 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-26 22:44:49.166 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-php'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-php
+2025-04-26 22:44:49.180 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-26 22:44:49.180 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-php-first-year'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-php-first-year
+2025-04-26 22:44:49.197 [info] > git rev-parse --show-toplevel [3ms]
+2025-04-26 22:44:49.197 [info] fatal: detected dubious ownership in repository at '/var/www/html/hostel-php2'
+To add an exception for this directory, call:
+
+	git config --global --add safe.directory /var/www/html/hostel-php2
+2025-04-26 22:44:49.213 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-26 22:44:49.213 [info] fatal: not a git repository (or any of the parent directories): .git
+2025-04-26 22:44:49.220 [info] [Model][doInitialScan] Initial repository scan completed - repositories (0), closed repositories (0), parent repositories (0), unsafe repositories (5)
+2025-04-26 22:45:15.974 [info] > git rev-parse --show-toplevel [2ms]
+2025-04-26 22:45:15.974 [info] fatal: not a git repository (or any of the parent directories): .git
