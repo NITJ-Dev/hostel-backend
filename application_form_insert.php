@@ -1,6 +1,8 @@
 <?php
 require_once("headers.php");
 require_once("db.php");
+require_once("is_current_device.php");
+
 // session_start();
 // Get the posted data
 $data = json_decode(file_get_contents("php://input"));
@@ -54,6 +56,12 @@ try {
         $course = $data->course;
         $sem = $data->sem;
         $uploaded = 1;
+
+
+        $deviceId = $_COOKIE["PHPSESSID"];
+
+
+        is_current_device($rollno, $deviceId);
 
         // Validate email
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {

@@ -1,6 +1,7 @@
 <?php
 require_once("headers.php");
 require_once("db.php");
+require_once("RedisLoginManager.php");
 
 // session_start();
 
@@ -88,6 +89,11 @@ if ($data && isset($data->email, $data->password)) {
                             'samesite' => 'None'        // SameSite attribute
                         ]
                     );
+
+                    $manager = new RedisLoginManager();
+                    $deviceId = $_COOKIE["PHPSESSID"];
+                    $manager->set($rollno, $deviceId);
+                    
                     echo json_encode(['status' => 'success', 'message' => 'Sign in successful', 'rollno' => $rollno,"course_sem" => $course_sem,'form_uploaded' => $form_flag, 'doc_uploaded' => $doc_flag]);
                 } else {
                     http_response_code(403);
