@@ -2,13 +2,16 @@
 require_once("headers.php");
 require_once("db.php");
 
-$table_name = "allowed_students";
+$table_name = "allowed_rollno";
 
 function getResponses($search = '') {
+    if($search === ''){
+        return "";
+    }
     global $conn, $table_name;
 
     try {
-        $query = "SELECT id, rollno, allowed FROM $table_name WHERE rollno LIKE ?";
+        $query = "SELECT sno, rollno, allowed FROM $table_name WHERE rollno LIKE ?";
         $stmt = $conn->prepare($query);
         $searchTerm = "$search%";
         $stmt->bind_param("s", $searchTerm); // Use "s" (string) for LIKE queries
@@ -82,11 +85,11 @@ try {
     } elseif ($method === 'POST' && $request === 'update_status') {
         try {
             $data = json_decode(file_get_contents("php://input"));
-            if (!empty($data->id) && isset($data->allowed)) {
-                $result = updateStatus($data->id, $data->allowed);
+            if (!empty($data->rollno) && isset($data->is_allowed)) {
+                $result = updateStatus($data->rollno, $data->is_allowed);
                 echo json_encode(["success" => $result, "message" => $result ? "Status updated." : "Update failed."]);
             } else {
-                throw new Exception("Invalid data.");
+                throw new Exception("Invalid data." .json_encode($data));
             }
         } catch (Exception $e) {
             echo json_encode(["success" => false, "message" => $e->getMessage()]);

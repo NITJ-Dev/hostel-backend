@@ -24,7 +24,7 @@ $hashed_password = hash('sha512', $password);
 
 
 // Prepare and bind
-$stmt = $conn->prepare("SELECT email, role FROM pravesh WHERE email = ? AND password = ?");
+$stmt = $conn->prepare("SELECT email, role FROM admin_pravesh WHERE email = ? AND password = ?");
 $stmt->bind_param("ss", $email, $hashed_password);
 $stmt->execute();
 $stmt->store_result();
