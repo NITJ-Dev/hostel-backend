@@ -20,8 +20,8 @@ session_set_cookie_params([
     // 'domain' => 'v1.nitj.ac.in',  //backedn-domain name
     'domain' => 'localhost',//backedn-domain name --comment in production.
     'secure' => false,
-    'httponly' => true,
-    'samesite' => 'None'
+    'httponly' => false,
+    // 'samesite' => 'None'
 ]);
 session_start();
 

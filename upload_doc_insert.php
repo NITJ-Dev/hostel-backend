@@ -108,9 +108,15 @@ if (isset($_POST['rollno']) && isset($_FILES['hostelReceipt']) && isset($_FILES[
 
     // Execute the statement
     if ($stmt->execute()) {
+        $newStep = '3';
+        if (! updateStudentStep($conn, $newStep)) {
+            throw new Exception(json_encode($_SESSION));
+        }
+        $_SESSION['step'] = $newStep;
+
         // Set success response code to 200 (OK)
         http_response_code(200);
-        echo json_encode(['status' => 'success', 'message' => 'Documents uploaded successfully']);
+        echo json_encode(['status' => 'success', 'message' => 'Documents uploaded successfully','step'=>$newStep]);
     } else {
         if ($stmt->errno == 1062) { // Duplicate entry
             // Set conflict response code to 409 (Conflict)
@@ -184,9 +190,15 @@ elseif (isset($_POST['rollno']) && isset($_FILES['messAdvance']) && isset($_FILE
 
     // Execute the statement
     if ($stmt->execute()) {
+        $newStep = '3';
+        if (! updateStudentStep($conn, $newStep)) {
+            throw new Exception(json_encode($_SESSION));
+        }
+        $_SESSION['step'] = $newStep;
+
         // Set success response code to 200 (OK)
         http_response_code(200);
-        echo json_encode(['status' => 'success', 'message' => 'Documents uploaded successfully']);
+        echo json_encode(['status' => 'success', 'message' => 'Documents uploaded successfully','step'=>$newStep]);
     } else {
         if ($stmt->errno == 1062) { // Duplicate entry
             // Set conflict response code to 409 (Conflict)

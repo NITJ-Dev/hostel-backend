@@ -79,8 +79,8 @@ if ($data && isset($data->email, $data->password)) {
                             // 'domain' => 'v1.nitj.ac.in',   // Domain-of backend
                             'domain' => 'localhost',    // Domain-of backend --comment in production
                             'secure' => false,           // Secure
-                            'httponly' => true,         // HTTP-only
-                            'samesite' => 'None'        // SameSite attribute
+                            'httponly' => false,         // HTTP-only
+                            // 'samesite' => 'None'        // SameSite attribute
                         ]
                     );
                     echo json_encode(
