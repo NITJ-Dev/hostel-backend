@@ -1,0 +1,11 @@
+sudo apt install redis-server
+
+redis-cli ping
+# Should return: PONG
+
+sudo apt install php-redis
+
+
+#TO check the redish:
+run the command "php test_redish.php" or open it in browser.
+

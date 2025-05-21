@@ -3,6 +3,8 @@
 
 require_once("headers.php");
 require_once("db.php");
+require_once("is_current_device.php");
+
 require_once("update_step.php");
 
 // Get the posted JSON data
@@ -57,9 +59,13 @@ try {
         $sem                    = $data->sem;
         $uploaded               = 1;
 
-        // Validate email format
-        if (! filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            http_response_code(400);
+
+        is_current_device($rollno); 
+        //pass the key, that you used while setting this on login ( i mean the roll number for 2-4 year, and for 1st year, application id.)
+
+        // Validate email
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            http_response_code(400); // Bad Request
             echo json_encode(['status' => 'error', 'message' => 'Invalid email address.']);
             exit;
         }

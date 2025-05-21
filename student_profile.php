@@ -43,7 +43,7 @@ try {
         $fields = [
             'full_name', 'father_name', 'mother_name', 'course', 'sem', 'year',
             'branch', 'physically_handicapped', 'blood_group', 'gender',
-            'email', 'self_mobile', 'father_mobile', 'mother_mobile'
+            'email', 'self_mobile', 'father_mobile', 'mother_mobile','skip_clerk','is_allowed'
         ];
 
         $set = [];

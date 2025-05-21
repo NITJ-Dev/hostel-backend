@@ -21,8 +21,11 @@ ini_set('error_log', '/var/log/php_errors.log'); // Ensure it's writable
 
 // Database config
 $host = "localhost";
-$user = "u267843737_hostel"; 
-$user_password = "Hostel@123"; 
+// $user = "u267843737_hostel"; 
+// $user_password = "Hostel@123"; 
+$user = "root"; 
+$user_password = ""; 
+
 $dbname = "nitjhosteldb"; 
 
 // Connect to database

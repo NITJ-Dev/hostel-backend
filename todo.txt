@@ -1,0 +1,2 @@
+maintain a table of request, which will contain the persons_id and the status if they accept the request. 
+a request is valid if all the student has accepted, and then only a room can be booked.
