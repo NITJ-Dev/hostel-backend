@@ -1,10 +1,12 @@
 <?php
 require_once 'RedisLoginManager.php';
 
-function is_current_device($rollno, $deviceID){
+function is_current_device($key){
+
+    $deviceId = $_COOKIE["PHPSESSID"];
 
     $manager = new RedisLoginManager();
-    $storedId = $manager->get($rollno);
+    $storedId = $manager->get($key);
 
     if ($storedId && ($storedId === $deviceId)) {
         return true;

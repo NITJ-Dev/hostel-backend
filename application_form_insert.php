@@ -58,10 +58,8 @@ try {
         $uploaded = 1;
 
 
-        $deviceId = $_COOKIE["PHPSESSID"];
-
-
-        is_current_device($rollno, $deviceId);
+        is_current_device($rollno); 
+        //pass the key, that you used while setting this on login ( i mean the roll number for 2-4 year, and for 1st year, application id.)
 
         // Validate email
         if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {

@@ -2,6 +2,7 @@
 require_once("headers.php");
 require_once("db.php");
 require_once("verify_student_cookie.php");
+require_once("is_current_device.php");
 
 // Function to handle file upload
 function uploadFile($file, $directory, $filename) {
@@ -52,7 +53,9 @@ http_response_code(400);
 
 // Get the posted data
 if (isset($_POST['rollno']) && isset($_FILES['hostelReceipt']) && isset($_FILES['messAdvance']) && isset($_FILES['aadhaar']) && isset($_FILES['photos'])) {
+    
     $rollno = $_POST['rollno'];
+    is_current_device($rollno); 
 
     $hostelReceiptFile = $_FILES['hostelReceipt'];
     $messAdvanceFile = $_FILES['messAdvance'];
@@ -128,6 +131,8 @@ if (isset($_POST['rollno']) && isset($_FILES['hostelReceipt']) && isset($_FILES[
 }
 elseif (isset($_POST['rollno']) && isset($_FILES['messAdvance']) && isset($_FILES['aadhaar']) && isset($_FILES['photos'])) {
     $rollno = $_POST['rollno'];
+    is_current_device($rollno); 
+
 
     //$hostelReceiptFile = $_FILES['hostelReceipt'];
     $messAdvanceFile = $_FILES['messAdvance'];
