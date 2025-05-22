@@ -86,7 +86,7 @@ if ($data && isset($data->email, $data->password)) {
                     );
 
                     $manager = new RedisLoginManager();
-                    $deviceId = $_COOKIE["PHPSESSID"];
+                    $deviceId = session_id();
                     $manager->set($rollno, $deviceId);
                     
                     echo json_encode(

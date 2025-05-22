@@ -2,6 +2,7 @@
 require_once("headers.php");
 require_once("db.php");
 require_once("verify_student_cookie.php");
+require_once("update_step.php");
 
 try {
     // Get the posted data
@@ -55,6 +56,16 @@ try {
                     $stmt->bind_param("ssss", $requesterRollno, $requestedRollno, $requestedRollno, $requesterRollno);
 
                     if ($stmt->execute()) {
+
+                        $newStep = '5.1';
+                        if (!updateStudentStep($conn, $newStep)) {
+                            throw new Exception(json_encode($_SESSION));
+                        }
+                        if (!updateStudentStep($conn, $newStep, $requesterRollno)) {
+                            throw new Exception(json_encode($_SESSION));
+                        }
+                        $_SESSION['step'] = $newStep;
+
                         http_response_code(200); // OK
                         echo json_encode(['status' => 'success', 'message' => 'Roommate request revoked successfully.']);
                     } else {

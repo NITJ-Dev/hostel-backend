@@ -3,7 +3,7 @@ require_once 'RedisLoginManager.php';
 
 function is_current_device($key){
 
-    $deviceId = $_COOKIE["PHPSESSID"];
+    $deviceId = session_id();
 
     $manager = new RedisLoginManager();
     $storedId = $manager->get($key);

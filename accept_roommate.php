@@ -9,7 +9,7 @@ ini_set('error_log', '/var/log/php_errors.log'); // Ensure this path is writable
 require_once("headers.php");
 require_once("db.php");
 require_once("verify_student_cookie.php");
-
+require_once("update_step.php");
 try {
     $data = json_decode(file_get_contents("php://input"));
 
@@ -18,7 +18,7 @@ try {
         throw new Exception('Invalid JSON input');
     }
 
-    if (isset($data->rollno)) {
+    if (isset($data->rollno, $data->requester)) {
         check_rollno($data->rollno);
         $accepterRollno = $data->rollno;
 
@@ -28,8 +28,18 @@ try {
             throw new Exception("Prepare statement failed: " . $conn->error);
         }
         $stmt->bind_param("s", $accepterRollno);
-        
+
         if ($stmt->execute()) {
+
+            $newStep = '5.2';
+            if (!updateStudentStep($conn, $newStep)) {
+                throw new Exception(json_encode($_SESSION));
+            }
+            if (!updateStudentStep($conn, $newStep, $data->requester)) {
+                throw new Exception(json_encode($_SESSION));
+            }
+
+            $_SESSION['step'] = $newStep;
             http_response_code(200); // OK
             echo json_encode(['status' => 'success', 'message' => 'Request accepted successfully.']);
         } else {

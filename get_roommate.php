@@ -2,6 +2,7 @@
 require_once("headers.php");
 require_once("db.php");
 require_once("verify_student_cookie.php");
+require_once("update_step.php");
 
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -44,7 +45,14 @@ try {
 
         // Check if requester_rollno is the same as accepter_rollno
         $flag = ($requester_rollno == $accepter_rollno);
-        if($flag==true){
+        if ($flag == true) {
+
+            $newStep = '6';
+            if (!updateStudentStep($conn, $newStep)) {
+                throw new Exception(json_encode($_SESSION));
+            }
+            $_SESSION['step'] = $newStep;
+
             http_response_code(200); // OK
             echo json_encode(['status' => 'error', 'message' => 'Room is already booked for this roll number.', 'isBooked' => true]);
             $stmt->close();
@@ -56,7 +64,8 @@ try {
     $userRoll = $data->rollno;
 
     // Function to execute prepared statements and handle errors
-    function executePreparedStmt($conn, $query, $params) {
+    function executePreparedStmt($conn, $query, $params)
+    {
         $stmt = $conn->prepare($query);
         if (!$stmt) {
             throw new Exception("Prepare statement failed: " . $conn->error);
@@ -134,10 +143,32 @@ try {
             $stmt->close();
         }
 
+
+        // $newStep = '5.1';
+        // if (!updateStudentStep($conn, $newStep)) {
+        //     throw new Exception(json_encode($_SESSION));
+        // }
+        // $_SESSION['step'] = $newStep;
+
         http_response_code(200); // OK
-        echo json_encode(['status' => 'success', 'message' => 'Fetched successfully.', 'request_status' => $request_status, 'requester' => $requester_rollno, 'roommate' => $roommate, 'revoke_details' => $revokeDetails, 'self_verification' => $self_verification]);
+        echo json_encode([
+            'status' => 'success',
+            'message' => 'Fetched successfully.',
+            'request_status' => $request_status,
+            'requester' => $requester_rollno,
+            'roommate' => $roommate,
+            'revoke_details' => $revokeDetails,
+            'self_verification' => $self_verification,
+            'step' => $_SESSION['step']
+        ]);
 
     } else {
+        $newStep = '5.1';
+        if (!updateStudentStep($conn, $newStep)) {
+            throw new Exception(json_encode($_SESSION));
+        }
+        $_SESSION['step'] = $newStep;
+
         http_response_code(200); // OK
         echo json_encode(['status' => 'success', 'flag' => '1', 'message' => 'No roommate request found']);
     }

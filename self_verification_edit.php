@@ -4,7 +4,6 @@ require_once "db.php";
 require_once "verify_student_cookie.php";
 require_once "update_step.php";
 
-session_start();
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
@@ -15,20 +14,30 @@ try {
         throw new Exception('Invalid JSON input');
     }
 
-    if (! isset($data->rollno, $data->flag, $data->studentdata)) {
+    if (! isset($data->rollno, $data->flag, $data->studentData)) {
         http_response_code(400);
-        throw new Exception('Missing required fields');
+        throw new Exception('Missing required fields'.json_encode($data));
     }
 
     check_rollno($data->rollno);
     $rollno           = $data->rollno;
     $self_verified    = (int) $data->flag;
-    $student_data     = $data->studentdata;
+    $student_data     = $data->studentData;
 
     if ($self_verified === 0) {
+
+        // 5) Advance step to 5.1(for roommate of 2nd,3rd and 4th year) and 5.2 for (single room booking for 4th year, and for 1st year.)
+        $newStep =  ($student_data->year ==="1") ? "5.2" : "5.1" ;
+
+        if (! updateStudentStep($conn, $newStep)) {
+            throw new Exception(json_encode($_SESSION));
+        }
+        $_SESSION['step'] = $newStep;
+
         echo json_encode([
             'status'  => 'no_change',
-            'message' => 'Response has been saved successfully'
+            'message' => 'Response has been saved successfully',
+            'step' => $newStep
         ]);
         exit;
     }
@@ -90,15 +99,14 @@ try {
     }
     $stmt->close();
 
-    // 2) Advance step to 3
-    $newStep = '3';
-    if (! updateStudentStep($conn, $newStep)) {
-        http_response_code(500);
-        throw new Exception("Failed to update step");
-    }
+    // 5) Advance step to 5.1(for roommate of 2nd,3rd and 4th year) and 5.2 for (single room booking for 4th year, and for 1st year.)
+    $newStep =  ($student_data->year ==="1") ? "5.2" : "5.1" ;
 
-    // 3) Persist in session and return
-    $_SESSION["step"] = $newStep;
+    if (! updateStudentStep($conn, $newStep)) {
+        throw new Exception(json_encode($_SESSION));
+    }
+    $_SESSION['step'] = $newStep;
+
     echo json_encode([
         'status'  => 'success',
         'message' => 'Student details updated successfully',

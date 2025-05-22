@@ -3,7 +3,7 @@ require_once("headers.php");
 require_once("db.php");
 require_once("verify_student_cookie.php");
 require_once("is_current_device.php");
-
+require_once("update_step.php");
 // Function to handle file upload
 function uploadFile($file, $directory, $filename) {
     $target_dir = $directory;
@@ -111,7 +111,7 @@ if (isset($_POST['rollno']) && isset($_FILES['hostelReceipt']) && isset($_FILES[
 
     // Execute the statement
     if ($stmt->execute()) {
-        $newStep = '3';
+        $newStep = '4';
         if (! updateStudentStep($conn, $newStep)) {
             throw new Exception(json_encode($_SESSION));
         }

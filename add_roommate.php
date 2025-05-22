@@ -118,26 +118,41 @@ try {
                 $emailResult = sendEmailNotification($accepterEmail, $accepterRollno, $requesterRollno);
 
                 if (!$emailResult['success']) {
-                    http_response_code(500); // Internal Server Error
-                    echo json_encode(['status' => 'error', 'message' => $emailResult['message']]);
-                    $stmt->close();
-                    $conn->close();
-                    exit;
+                    // Log the failure, but continue
+                    error_log("Roommate-request email failed: " . $emailResult['message']);
+                    // Optionally include a warning in your JSON response:
+                    $warning = ' (Warning: email failed to send)';
+                } else {
+                    $warning = '';
                 }
 
                 // Insert request into database
-                $stmt = $conn->prepare("INSERT INTO roommate_requests (requester_rollno, requester_flag, accepter_rollno, accepter_flag) VALUES (?, 1, ?, 0)");
-                if (!$stmt) {
-                    http_response_code(500); // Internal Server Error
+                $stmt = $conn->prepare(
+                    "INSERT INTO roommate_requests 
+                    (requester_rollno, requester_flag, accepter_rollno, accepter_flag) 
+                    VALUES (?, 1, ?, 0)"
+                );
+                if (! $stmt) {
+                    http_response_code(500);
                     throw new Exception("Prepare statement failed: " . $conn->error);
                 }
                 $stmt->bind_param("ss", $requesterRollno, $accepterRollno);
 
                 if ($stmt->execute()) {
-                    http_response_code(200); // OK
-                    echo json_encode(['status' => 'success', 'message' => 'Roommate request sent successfully.']);
+
+                    $newStep = '5.1';
+                    if (! updateStudentStep($conn, $newStep)) {
+                        throw new Exception(json_encode($_SESSION));
+                    }
+                    $_SESSION['step'] = $newStep;
+
+                    http_response_code(200);
+                    echo json_encode([
+                        'status'  => 'success',
+                        'message' => 'Roommate request sent successfully' . $warning
+                    ]);
                 } else {
-                    http_response_code(500); // Internal Server Error
+                    http_response_code(500);
                     throw new Exception('Database error: ' . $stmt->error);
                 }
 
